@@ -163,11 +163,11 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'عنوان الموضوع';
+   var tocHead1 = 'عنوان المقالة';
    var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'التاريخ';
+   var tocHead2 = 'تاريخ النشر';
    var tocTool2 = 'Click to sort by date';
-   var tocHead3 = 'الأقسام';
+   var tocHead3 = 'التصنيف';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -191,10 +191,8 @@ function displayToc(filter) {
    tocTable += '<table>';
    tocTable += '<tr>';
    tocTable += '<td class="toc-header-col1">';
-   tocTable += '<a href="javascript:toggleTitleSort();" title="' + tocTool1 + '">' + tocHead1 + '</a>';
    tocTable += '</td>';
    tocTable += '<td class="toc-header-col2">';
-   tocTable += '<a href="javascript:toggleDateSort();" title="' + tocTool2 + '">' + tocHead2 + '</a>';
    tocTable += '</td>';
    tocTable += '<td class="toc-header-col3">';
    tocTable += '</td>';
@@ -252,4 +250,3 @@ function hideToc() {
   var toclink = document.getElementById("toclink");
   toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Show Table of Contents</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
 }
-"<div id=\"toc-loading\">Loading content, please wait...<br /><img align=\"middle\" src=\"http://2.bp.blogspot.com/-WK0-4ILTaL8/T0NjToWRWlI/AAAAAAAABmI/U5p3cqo9lOU/s1600/loading.gif\" /></div>";
